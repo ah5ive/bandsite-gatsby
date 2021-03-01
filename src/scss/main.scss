@@ -1,0 +1,15 @@
+@import 'variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'mixins';
+@import 'typography';
+@import 'global';
+
+@import 'libs/media-queries';
+
+@import 'header';
+@import 'footer';
+@import 'section';
+
+@import 'home'

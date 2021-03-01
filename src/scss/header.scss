@@ -1,0 +1,227 @@
+// =====================================================================
+// Header
+// =====================================================================
+
+$ham-w: 30px;
+
+.header {
+  background-color: $color-darkmode-bg;
+  padding: 10px 0;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    padding: 14px 0 16px 0;
+  }
+
+  .back-to-photonico {
+    text-align: right;
+    margin: 16px 0 0 0;
+    padding-right: 50px;
+    display: block;
+    height: 19px;
+    @include font;
+    color: $color-greyer;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .navbar-collapse {
+    // background: $color-white;
+    z-index: 1000;
+  }
+
+  a {
+    color: $color-darkmode-text;
+    @include font(16);
+  }
+
+  .ham {
+    appearance: none;
+    @include hamburger($ham-w, 20px, 2px, $color-black);
+    margin-left: 10px;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  .navbar {
+    padding: 0 30px;
+    height: 73px;
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+      padding: 0 60px;
+    }
+
+    &.navbar-sec {
+      height: auto;
+      margin-top: 20px;
+      width: 100%;
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 40px;
+        display: flex;
+        width: 100%;
+      }
+
+      a {
+        @include font (18);
+        font-weight:  normal;
+        text-decoration: none;
+
+        &.active {
+          color: $color-red;
+          font-weight: bold;
+          border-bottom: 5px solid $color-red;
+          width: 130px;
+          padding-left: 0;
+        }
+      }
+
+      .underline {
+        border-bottom: 5px solid $color-black;
+        width: 130px;
+        padding-left: 0;
+      }
+
+      &.padding-off {
+        padding: 0;
+      }
+    }
+
+    &.mobile {
+      padding: 0;
+      height: auto;
+    }
+  }
+
+  .navbar-nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &.nav-mobile {
+      margin-left: 10px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+
+      .mobile-nav-item {
+        @include font (18);
+        text-align: left;
+        text-decoration: none;
+        width: 50%;
+        padding: 5px 0;
+        border-bottom: 4px solid $color-black;
+
+        &.active {
+          color: $color-red;
+          width: 50%;
+          font-weight: bold;
+          border-bottom: 5px solid $color-red;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+    display: block;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    img {
+      // height: 53px; //add the img height
+      @include media-breakpoint-up(lg) {
+        margin-right: 20px;
+        margin-bottom: 6px; // agaration alignment
+      }
+    }
+  }
+
+  .spacer {
+    width: $ham-w;
+
+    display: block;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  .nav-item {
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      padding-left: 24px;
+    }
+  }
+
+  .nav-link {
+    @include font-roboto-bold;
+    text-transform: uppercase;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+
+    &:not(.cta) {
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &.is-active {
+        color: $color-brand-secondary;
+      }
+    }
+
+    &.cta {
+      color: $color-white;
+      padding: 0 30px;
+      margin: 10px 0;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 30px;
+        margin: 0;
+      }
+
+      &.is-active { // overwrite page highlighted link style
+        background-color: $color-brand;
+      }
+    }
+
+    &.logo {
+      display: block;
+      width: 80px;
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 80%;
+      @include media-breakpoint-up(md) {
+        width: 35px;
+      }
+    }
+  }
+}

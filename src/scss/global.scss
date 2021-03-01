@@ -1,0 +1,428 @@
+// =====================================================================
+// Global (styles to be used throughout site)
+// =====================================================================
+
+// General
+html {
+}
+
+body {
+  background-color: $color-darkmode-bg;
+  color: $color-darkmode-text;
+}
+
+.wrap {
+  @include footer-fix;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer {
+
+}
+
+nav {
+
+}
+
+ul {
+  & > li {
+  }
+}
+
+ol {
+  padding-left: 25px;
+
+  > li {
+    @include font($font-base-size);
+    margin-bottom: 30px;
+  }
+}
+
+img {
+}
+
+figure {
+  img {
+  }
+
+  figcaption {
+  }
+}
+
+a {
+  transition: color 0.3s $easeOutCubic, opacity 0.3s $easeOutCubic;
+
+  &:hover {
+  }
+}
+
+button {
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+input {
+  outline: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+// Specifics
+.ghost {
+  position: relative;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.cta {
+  transition: background-color 0.3s $easeOutCubic;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 270px;
+  text-transform: uppercase;
+  @include font(20);
+  border: 0;
+  background-color: $color-brand;
+  color: $color-white;
+  padding: 0 30px;
+  @include font-roboto-bold;
+
+  @include media-breakpoint-down(xs) {
+    padding: 0 18px;
+    height: auto;
+    @include font(16);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &:hover {
+    background-color: darken($color-brand, $state-hover);
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: $color-grey;
+  }
+
+  &.cta-transparent {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color-grey-dark;
+    }
+  }
+
+  &.is-active {
+    background-color: $color-grey-dark;
+
+    &:hover {
+      background-color: lighten($color-grey-dark, $state-hover);
+    }
+  }
+
+  &.cta-ghost {
+    transition: background-color 0.3s $easeOutCubic, color 0.3s $easeOutCubic;
+    //background-color: transparent;
+    //border: solid 1px $color-white;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    width: auto;
+    max-width: none;
+    color: $color-white;
+
+    @include media-breakpoint-down (xs) {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+      text-decoration: none;
+      //background-color: $color-white;
+      //color: $color-greyer;
+    }
+
+    &.primary {
+      border-color: $color-brand;
+      color: $color-brand;
+
+      &:hover {
+        background-color: $color-brand;
+        color: $color-white;
+      }
+    }
+    //added a secondary css for cta ghost button
+    &.secondary {
+      background-color: transparent;
+      border: solid 2px $color-white;
+
+      &:hover {
+        text-decoration: none;
+        background-color: $color-white;
+        color: $color-greyer;
+      }
+    }
+  }
+}
+
+.is-highlighting {
+  animation: placeholder-highlighting 2.7s 0.3s linear 1 forwards;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 0;
+
+  @include placeholder {
+    color: rgba($color-darkmode-text, 0.15);
+  }
+}
+
+.logo {
+  display: inline-block;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 20px;
+
+  &.is-error {
+    .field-text {
+      color: $color-error;
+    }
+
+    .field-input {
+      border-color: $color-error;
+    }
+  }
+}
+
+.field-text {
+  display: inline-block;
+  color: $color-darkmode-text;
+  @include font(16);
+  font-weight: 500;
+  @include media-breakpoint-up(sm) {
+    @include font-roboto-bold;
+  }
+}
+
+.field-input {
+  @include font(16);
+  border-bottom: 1px solid $color-grey-light;
+  background-color: transparent;
+  color: $color-darkmode-text;
+
+  @include media-breakpoint-up(sm) {
+    min-height: 12px;
+  }
+}
+
+.field-textarea {
+  @include font(14);
+  border: 0;
+  padding: 10px;
+  outline: none;
+  background-color: $color-white;//$color-grey-lighter;
+
+  @if ($is-darkmode) {
+    background-color: $color-grey-darker;
+    color: $color-white;
+  }
+
+  min-height: 75px;
+
+  @include media-breakpoint-up(sm) {
+    min-height: 210px;
+    @include font(16);
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 180px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 120px;
+  }
+}
+
+.field-radio {
+  label {
+    @include font($font-base-size);
+  }
+}
+
+.field-error {
+  color: $color-error;
+  @include font(15);
+  margin: 8px 0;
+}
+
+.spinner {
+  @include loading($w: 24px, $border-w: 3px, $spd: 1.3s, $primary: $color-grey-darker, $secondary: $color-grey-light);
+
+  .cta & {
+    @include loading($w: 15px, $border-w: 3px, $spd: 1.3s, $primary: $color-grey-darker, $secondary: $color-grey-light);
+  }
+}
+
+.pn-card {
+  position: relative;
+  padding: 30px 0;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  color: $color-darkmode-text;
+
+  background-color: darken($color-darkmode-bg, $color-offset);
+
+  @if ($is-darkmode) {
+    background-color: lighten($color-darkmode-bg, $color-offset);
+  }
+
+  .field-text {
+    margin-bottom: 0;
+    @include media-breakpoint-up (sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .fa-trash-alt {
+    transition: color 0.4s $easeOutCubic;
+    color: $color-grey-light;
+    @include font(30);
+    cursor: pointer;
+
+    &:hover {
+      color: $color-darkmode-text;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color-brand;
+  }
+}
+
+.pn-card-content {
+  padding: 0 15px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.pn-card-submit {
+  position: relative;
+  padding: 30px 0;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  color: $color-darkmode-text;
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+.img-holder {
+  text-align: center;
+
+  img {
+    &[src*='.svg'] {
+      max-width: 260px;
+
+      @include media-breakpoint-up(md) {
+        max-width: none;
+      }
+    }
+  }
+}
+
+.hdb {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 405px;
+  height: 290px;
+  opacity: 0.4;
+
+  @include media-breakpoint-up(md) {
+    width: 810px;
+    height: 580px;
+  }
+
+  @if ($is-darkmode) {
+    opacity: 0.2;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hdb-flats {
+    filter: hue-rotate($color-hue);
+  }
+}
+
+.upload-table {
+  background: $color-white;
+  border-radius: 20px;
+  margin: 2.4rem 0;
+  //nested table
+  tr {
+    &:first-child {
+      td {
+        padding-top: 1.3rem;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
+      }
+    }
+
+    &:last-child {
+      border-top: 3px solid darken($color-darkmode-bg, $color-offset);
+
+      td {
+        padding-top: 1.3rem;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+[v-cloak] {
+  display: none;
+
+  &::before {
+    @include loading($w: 24px, $border-w: 3px, $spd: 1.3s, $primary: $color-grey-darker, $secondary: $color-grey-light);
+  }
+}
