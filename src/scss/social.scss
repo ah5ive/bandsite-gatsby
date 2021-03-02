@@ -1,0 +1,18 @@
+.platform-share {
+  width: 100%;
+  .sharing-list {
+    padding-top: 10px;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -40px;
+
+    li {
+      padding-right: 20px;
+      img {
+        width: 40px;
+      }
+    }
+  }
+}

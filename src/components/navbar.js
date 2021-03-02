@@ -6,7 +6,7 @@ import {Link} from 'gatsby'
 const Navbar = () => {
   return (
     <header className="header">
-      <div className="fluid-container">
+      <div className="container">
         <div className="row align-items-center">
           <div className="col-12">
             <nav className="navbar navbar-expand-lg">

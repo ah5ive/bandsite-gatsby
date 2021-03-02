@@ -41,7 +41,7 @@ $ham-w: 30px;
   .ham {
     appearance: none;
     @include hamburger($ham-w, 20px, 2px, $color-black);
-    margin-left: 10px;
+    // margin-left: 10px;
 
     @include media-breakpoint-up(lg) {
       display: none;
@@ -49,11 +49,13 @@ $ham-w: 30px;
   }
 
   .navbar {
-    padding: 0 30px;
+    // padding: 0.5rem 0;
+    // padding: 0 30px;
+    padding: 0;
     height: 73px;
     width: 100%;
     @include media-breakpoint-up(sm) {
-      padding: 0 60px;
+      // padding: 0 60px;
     }
 
     &.navbar-sec {
@@ -96,6 +98,7 @@ $ham-w: 30px;
     &.mobile {
       padding: 0;
       height: auto;
+      margin: 0 -15px;
     }
   }
 
@@ -112,7 +115,7 @@ $ham-w: 30px;
     }
 
     &.nav-mobile {
-      margin-left: 10px;
+      // margin-left: 10px;
       margin-top: 20px;
       display: flex;
       flex-direction: column;
