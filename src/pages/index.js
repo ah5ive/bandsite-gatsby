@@ -1,7 +1,7 @@
 import React from "react"
 import Article from "../components/article"
 import Layout from "../components/layout"
-import SectionPhoto from "../components/section"
+import SectionPhoto from "../components/sectionPhoto"
 
 class Home extends React.Component {
  render () {

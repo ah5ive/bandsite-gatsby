@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const SectionPhoto = () => {
-  return (
-    <section className="sec sec-inspiration" style={{backgroundImage: 'url(../../images/home/bg-band-photo.jpg)'}}></section>
+const Section = (props) => {
+  return(
+  <section className={props.className}>
+    <div className='container'>
+      <div className='row'>
+        <div className='col-12'>
+          {props.children}
+        </div>
+      </div>
+    </div>
+  </section>
   )
 }
 
-export default SectionPhoto;
+export default Section;
