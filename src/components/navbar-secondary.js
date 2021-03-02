@@ -7,9 +7,9 @@ const SiteNav = () => {
       <nav id='navbar-sec' className='navbar navbar-sec navbar-expand-lg'>
         <div className="navbar-nav row align-items-center">
           <Link className='nav-item underline' activeClassName="active" to='/'>Home</Link>
-          <Link className='nav-item underline' activeClassName="active" to='/404'>About us</Link>
-          <Link className='nav-item underline' activeClassName="active" to='/404'>Discography</Link>
-          <Link className='nav-item underline' activeClassName="active" to='/404'>Store</Link>
+          <Link className='nav-item underline' activeClassName="active" to='/aboutus'>About us</Link>
+          <Link className='nav-item underline' activeClassName="active" to='/discography'>Discography</Link>
+          <Link className='nav-item underline' activeClassName="active" to='/store'>Store</Link>
           <Link className='nav-item underline' activeClassName="active" to='/contact'>Contact us</Link>
         </div>
       </nav>
@@ -25,9 +25,9 @@ const SiteNav = () => {
           <div className='container'>
             <div className="navbar-nav nav-mobile row">
               <Link className='mobile-nav-item' activeClassName="active" to='/'>Home</Link>
-              <Link className='mobile-nav-item' activeClassName="active" to='/404'>About us</Link>
-              <Link className='mobile-nav-item' activeClassName="active" to='/404'>Discography</Link>
-              <Link className='mobile-nav-item' activeClassName="active" to='/404'>Store</Link>
+              <Link className='mobile-nav-item' activeClassName="active" to='/aboutus'>About us</Link>
+              <Link className='mobile-nav-item' activeClassName="active" to='/discography'>Discography</Link>
+              <Link className='mobile-nav-item' activeClassName="active" to='/store'>Store</Link>
               <Link className='mobile-nav-item' activeClassName="active" to='/contact'>Contact us</Link>
             </div>
           </div>
