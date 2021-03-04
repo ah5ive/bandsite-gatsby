@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Sharing = ({ propsSharing }) => {
-  console.log(propsSharing, 'myprops')
   return(
     <div className='platform-share'>
       <h4>Available in major streaming platform:</h4>

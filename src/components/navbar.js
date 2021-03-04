@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="row align-items-center">
           <div className="col-12">
             <nav className="navbar navbar-expand-lg">
-              <Link to='/' className="logo navbar-brand"><img src="../../images/logo/logo.svg" alt=""/></Link>
+              <Link to='/' className="logo navbar-brand"><img src="../../images/logo/logo.svg" alt="logo"/></Link>
               <div className="container">
                 <ul className="navbar-nav row align-items-center ml-lg-auto">
                   <li className="nav-item"> <Link to='/' className="nav-link logo"><img src="../../images/logo/logo.svg" alt=""/></Link></li>

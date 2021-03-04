@@ -23,7 +23,7 @@ class Article extends React.Component {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='sec-article-title'>
-                <h2>Home Coming</h2>
+                <h2>{this.props.title}</h2>
               </div>
               <div className='sec-article-content'>
                 <p className='js-eng'>This is an instrumental track in the album. It serves as an intro of the album with the intent of expressing Homecoming. Visualising us drifting in space, it is time for us to regroup and head back to earth. </p>
