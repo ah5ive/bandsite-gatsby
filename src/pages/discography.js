@@ -2,11 +2,9 @@ import React from 'react'
 import Layout from "../components/layout"
 import Section from "../components/section"
 import SectionPhoto from "../components/sectionPhoto"
-import { useSiteMetadata } from "../hooks/staticQuery"
-
+import data from "../data/static.json"
 
 const Discography = () => {
-  const data = useSiteMetadata()
   const assetPath = '../../images/albums/'
   // data from hooks
   console.log(data, 'data')
@@ -23,7 +21,7 @@ const Discography = () => {
     </div>
   </div>
     )
-// populate with array.map()
+// // populate with array.map()
   return (
     <Layout>
     <div className='page page-home'>

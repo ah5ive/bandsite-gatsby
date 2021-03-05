@@ -144,12 +144,13 @@
         flex-direction: row;
         background: none;
         border: none;
-        margin-bottom: 30px;
+        padding-bottom: 50px;
         border-radius: none;
         break-inside: avoid-column;
 
         @include media-breakpoint-up(lg) {
-          min-height: 150px;
+          // min-height: 150px;
+          padding-bottom: 150px;
         }
 
         .img-container {
